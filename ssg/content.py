@@ -8,6 +8,6 @@ class Content(Mapping):
     __regex = re.compile(__delimiter, re.MULTILINE)
 
     def load(self, cls, string):
-        _, fm, content = cls.__regex.split(string=2
+        _, fm, content = cls.__regex.split(string, 2)
         metadata = load(fm, Loader=FullLoader)
-            return cls(metadata, content)
+        return cls(metadata, content)
